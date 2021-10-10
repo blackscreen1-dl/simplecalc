@@ -4,41 +4,41 @@ const data = {
 	<textarea id="calctext" placeholder="Type your equation here..."></textarea>
 	<p>Supported functions: +, -, *, /, sin(), cos(), tan()</p>
 	<select id="rad">
-	<option value="rad">Radians</option>
-	<option value="deg">Degrees</option>
+		<option value="rad">Radians</option>
+		<option value="deg">Degrees</option>
 	</select>
-	  <p>Decimal Places</p>
-	  <select id="dec">
-	  <option value="0">0</option>
-	  <option value="1">1</option>
-	  <option value="2">2</option>
-	  <option value="3">3</option>
-	  <option value="4">4</option>
-	  <option value="5">5</option>
-	  <option value="6">6</option>
-	  <option value="7">7</option>
-	  <option value="8">8</option>
-	  <option value="9">9</option>
-	  <option value="10">10</option>
+	<p>Decimal Places</p>
+	<select id="dec">
+		<option value="0">0</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
 	</select>
 	<button id="calc" onclick="evalc()">Calculate</button>
 	`,
 	sim: `
 	<table id="sim">
-	  <tr>
-		<td class="simul"><textarea id="simx1"></textarea></td>
-		<td class="simul">x + </td>
-		<td class="simul"><textarea  id="simx2"></textarea></td>
-		<td class="simul">y = </td>
-		<td class="simul"><textarea  id="simx3"></textarea></td>
-	  </tr>
-	  <tr>
-		<td class="simul"><textarea id="simy1"></textarea></td>
-		<td class="simul">x + </td>
-		<td class="simul"><textarea  id="simy2"></textarea></td>
-		<td class="simul">y = </td>
-		<td class="simul"><textarea  id="simy3"></textarea></td>
-	  </tr>
+		<tr>
+			<td class="simul"><textarea id="simx1"></textarea></td>
+			<td class="simul">x + </td>
+			<td class="simul"><textarea  id="simx2"></textarea></td>
+			<td class="simul">y = </td>
+			<td class="simul"><textarea  id="simx3"></textarea></td>
+		</tr>
+		<tr>
+			<td class="simul"><textarea id="simy1"></textarea></td>
+			<td class="simul">x + </td>
+			<td class="simul"><textarea  id="simy2"></textarea></td>
+			<td class="simul">y = </td>
+			<td class="simul"><textarea  id="simy3"></textarea></td>
+		</tr>
 	</table>
 	<button id="calc" onclick="evals()">Calculate</button>
 	<div id="simres">Result will appear here</div>
@@ -53,10 +53,10 @@ const page = (a) => {
 function evalc() {
 	var s = String(
 		document
-		.getElementById("calctext")
-		.value.replace("cos", "Math.cos")
-		.replace("sin", "Math.sin")
-		.replace("tan", "Math.tan")
+			.getElementById("calctext")
+			.value.replace("cos", "Math.cos")
+			.replace("sin", "Math.sin")
+			.replace("tan", "Math.tan")
 	);
 	var l = document.getElementById("rad").selectedOptions[0].value;
 	if (l === "deg") {
